@@ -1,0 +1,16 @@
+Summary
+
+We trained a RandomForestRegressor on the UCI Energy Efficiency dataset to predict heating/cooling loads.
+Feature influence was analyzed using Permutation Importance (PI), SHAP (global + local), and LIME (local).
+PI identified which features most affect model performance, SHAP explained both overall and individual predictions with direction, and LIME provided interpretable local surrogate models.
+Comparisons highlight consistent drivers across methods and context-specific differences.
+
+Bullet Insights
+
+1. Building shape and Height are the most important factors.
+2. Surface Area and Roof Area also strongly affect heating/cooling demand.
+3. Glazing has a smaller effect but usually increases loads when larger.
+4. PI and SHAP mostly agree on top features, but SHAP shows whether they push loads up or down.
+5. LIME and SHAP local results match: small, compact buildings use less energy; large areas raise demand.
+6. PI is global (overall feature importance), while SHAP and LIME explain each building individually.
+7. All methods confirm that geometry matters most, while glazing plays a smaller role.
